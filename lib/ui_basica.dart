@@ -33,7 +33,7 @@ class MyHomePage extends StatelessWidget {
                 onPressed: () {
                   final snackBar = SnackBar(
                     content: const Text('Olá, Next Tecnologia!'),
-                    duration: const Duration(seconds: 2),
+                    duration: const Duration(seconds: 1),
                     action: SnackBarAction(
                       label: 'Fechar',
                       onPressed: () {},

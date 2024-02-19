@@ -14,7 +14,7 @@ class ListPageState extends State<ListPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('List Page'),
+        title: const Text('Lista Simples'),
         backgroundColor: Colors.blue,
       ),
       body: ListView.builder(

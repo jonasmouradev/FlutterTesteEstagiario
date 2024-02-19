@@ -46,7 +46,8 @@ class _PostListScreenState extends State<PostListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Posts'),
+        backgroundColor: Colors.blue,
+        title: const Text('Postagens'),
       ),
       body: ListView.builder(
         itemCount: _posts.length,
@@ -77,6 +78,7 @@ class PostDetailsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.blue,
         title: const Text('Detalhes'),
       ),
       body: ListView(
