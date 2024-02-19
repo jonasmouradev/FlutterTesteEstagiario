@@ -5,17 +5,17 @@ class ListPage extends StatefulWidget {
 
   @override
   State<ListPage> createState() {
-    return HomePageState();
+    return ListPageState();
   }
 }
 
-class HomePageState extends State<ListPage> {
+class ListPageState extends State<ListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home Page'),
-        backgroundColor: Colors.red,
+        title: const Text('List Page'),
+        backgroundColor: Colors.blue,
       ),
       body: ListView.builder(
         itemCount: 10,

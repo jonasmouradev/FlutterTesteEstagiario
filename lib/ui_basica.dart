@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application/api.dart';
+import 'package:flutter_application/form.dart';
 import 'package:flutter_application/list_page.dart';
-
-void main() {
-  runApp(const UiBasica());
-}
 
 class UiBasica extends StatelessWidget {
   const UiBasica({super.key});
@@ -11,11 +9,11 @@ class UiBasica extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Snackbar Example',
+      title: 'UI Básica',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: const MyHomePage(),
     );
   }
 }
@@ -38,9 +36,7 @@ class MyHomePage extends StatelessWidget {
                     duration: const Duration(seconds: 2),
                     action: SnackBarAction(
                       label: 'Fechar',
-                      onPressed: () {
-                        // Ação ao pressionar o botão "Fechar" no snackbar
-                      },
+                      onPressed: () {},
                     ),
                   );
                   ScaffoldMessenger.of(context).showSnackBar(snackBar);
@@ -56,6 +52,26 @@ class MyHomePage extends StatelessWidget {
                   );
                 },
                 child: const Text('Lista Simples'),
+              ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const Api()),
+                  );
+                },
+                child: const Text('API'),
+              ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const LoginPage()),
+                  );
+                },
+                child: const Text('Formulário'),
               ),
             ],
           ),
